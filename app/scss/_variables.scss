@@ -1,0 +1,19 @@
+// COLORS
+$white: #ffffff;
+$blue: #19B5FE; 
+$grey1: #363636; 
+$grey2: #464646;
+$grey3: #3f3f3f;
+$grey4: #606060;
+
+$color-accent: $blue;
+$color-accent-hover: darken($color-accent, 10%);
+$color-header: $grey1;
+$color-text1: $grey2;
+$color-text2: $grey3;
+
+// TYPOGRAPHY
+$font-size: 18px;
+$line-height: 24px;
+$font-family: 'Roboto', sans-serif;
+$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family

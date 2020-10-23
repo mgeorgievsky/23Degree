@@ -1,0 +1,104 @@
+@import 'variables';
+@import 'fonts';
+@import 'global';
+
+// MAIN STYLES
+
+.first-screen {
+    min-height: 700px;
+    padding: 35px 0 55px 0;
+    color: $white;
+    background-image: url(../img/main-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+    }
+    &__phone {
+        position: relative;
+        margin-left: auto;
+        padding-left: 36px;
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 300;
+        a {
+            margin-top: 4px;
+            display: block;
+            font-size: 21px;
+            line-height: 21px;
+            font-weight: 500;
+            color: $white;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: 28px;
+            height: 42px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url(../img/icon-smartphone.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+    &__menu {
+        margin-left: 60px;
+    }
+    &__menu-icon {
+        position: relative;
+        padding-top: 28px;
+        width: 46px;
+        text-align: center;
+        font-size: 12px;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 46px;
+            height: 21px;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-image: url(../img/icon-menu.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+
+        }
+    }
+    &__menu-list {
+        display: none;
+    }
+    &__menu-link {
+    }
+
+    &__title {
+        margin-top: 65px;
+        font-size: 48px;
+        line-height: 48px;
+        font-weight: 700;
+        text-align: center;
+    }
+    &__subtitle {
+        margin-top: 10px;
+        font-size: 36px;
+        line-height: 36px;
+        font-weight: 700;
+        text-align: center;
+    }
+    &__offer {
+        margin-top: 36px;
+        font-size: 22px;
+        line-height: 22px;
+        font-weight: 300;
+        text-align: center;
+    }
+}
