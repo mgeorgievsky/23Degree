@@ -41,10 +41,17 @@ a {
 }
 
 button {
+	display: block;
 	color: inherit;
 	background: none;
 	border: none;
 	outline: none;
+	cursor: pointer;
+}
+
+input[type="submit"] {
+	display: block;
+	border: none;
 	cursor: pointer;
 }
 
