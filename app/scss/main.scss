@@ -49,33 +49,82 @@
         }
     }
     &__menu {
-        margin-left: 60px;
+        margin-left: 40px;
+        display: flex;
+        align-items: center;
     }
     &__menu-icon {
         position: relative;
+        overflow: hidden;
         padding-top: 28px;
         width: 46px;
+        height: 46px;
         text-align: center;
         font-size: 12px;
         letter-spacing: 0.3px;
         text-transform: uppercase;
-        &::before {
+        transition: .3s;
+        &-topline, &-botline, &-midline, &-text {
             position: absolute;
-            content: "";
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 3px;
+            transition: .3s;
+        }
+        &-topline, &-botline, &-midline {
+            transform-origin: center;
             width: 46px;
-            height: 21px;
+            height: 3px;
+            background-color: $white;
+            border-radius: 1.5px;
+        }
+        &-topline {
             top: 0;
-            left: 0;
-            right: 0;
-            background-image: url(../img/icon-menu.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
-
+        }
+        &-midline {
+            top: 9px;
+        }
+        &-botline {
+            top: 18px;
+        }
+        &-text {
+            bottom: 3px;
+        }
+        &--opened &-topline {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        &--opened &-midline {
+            width: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &--opened &-botline {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        &--opened &-text {
+            bottom: -12px;
         }
     }
     &__menu-list {
-        display: none;
+        margin-right: 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        transition: .3s;
+        width: 0;
+        li, a {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            color: $white;
+            margin-right: 10px;
+        }
+        &--opened {
+            width: 370px;
+        }
     }
     &__menu-link {
     }
@@ -205,5 +254,176 @@
     100% {
         opacity: 0;
         transform: translateY(5px);
+    }
+}
+
+
+.services {
+    &__title {
+    }
+    &__inner {
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+    }
+    &__item-content, &__item-image {
+        max-width: 555px;
+    }
+    &__item-title {
+        font-size: 28px;
+        font-weight: 300;
+        color: $color-accent;
+        margin-bottom: 15px;
+    }
+    &__item-text {
+        font-size: 18px;
+        font-weight: 100;
+        color: $color-text1;
+        margin-bottom: 30px;
+    }
+    &__item-button {
+        padding-left: 37px;
+        padding-right: 37px;
+    }
+    &__item-image {
+        img {
+            display: block;
+        }
+    }
+}
+
+
+.calculator {
+    background-image: url(../img/calc-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: $white;
+    &__title {
+        color: $white;
+        &::after {
+            background-color: $white;
+        }
+    }
+    &__subtitle {
+        font-size: 26px;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    &__form {
+        form {
+            display: flex;
+            justify-content: space-between;
+            align-items: top;
+        }
+    }
+
+    &__controls {
+        max-width: 650px;
+        width: 100%;
+    }
+    &__controls-area, &__controls-package {
+        border: 1px solid $white;
+        border-radius: 4px;
+        padding: 20px 25px 28px 25px;
+        margin-bottom: 10px;
+    }
+    &__controls-area-title, &__controls-package-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    &__controls-area-slider-labels {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__controls-area-slider-label {
+        position: relative;
+        font-size: 16px;
+        font-weight: 300;
+        &::after {
+            position: absolute;
+            content: "";
+            height: 19px;
+            width: 19px;
+            top: 28px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $white;
+            border-radius: 10px;
+            
+        }
+        &:first-child::after {
+            left: 0;
+            transform: none;
+        }
+        &:last-child::after {
+            right: 0;
+            left: auto;
+            transform: none;
+        }
+    }
+    &__controls-area-slider {
+        width: 100%; 
+        height: 9px; 
+        border-radius: 5px;
+        background: rgba($white, .5); 
+        outline: none; 
+        -webkit-transition: .2s; 
+        transition: opacity .2s;
+        &::-webkit-slider-thumb {
+            width: 23px; 
+            height: 23px; 
+            border-radius: 12px;
+            border: 9px solid $color-accent;
+            background: $white; 
+            cursor: pointer; 
+            z-index: 10;
+        }
+    }
+    &__controls-package-buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__controls-package-button {
+        display: block;
+        max-width: 190px;
+        width: 100%;
+        text-align: center;
+        border-radius: 4px;
+        background-color: transparent;
+        border: 1px solid $white;
+        font-size: 16px;
+        line-height: 16px;
+        padding: 15px;
+        cursor: pointer;
+        &:hover {
+            background-color: transparent;
+            color: $color-accent;
+            border-color: $color-accent;
+        }
+    }
+
+    &__result {
+    }
+    &__result-area-label {
+    }
+    &__result-area-input {
+    }
+    &__result-meterprice-label {
+    }
+    &__result-meterprice {
+    }
+    &__result-totalprice-label {
+    }
+    &__result-button {
+    }
+    &__result-phone {
     }
 }

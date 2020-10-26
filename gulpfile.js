@@ -92,6 +92,10 @@ function cleanimg() {
 	return del('' + paths.images.dest + '/**/*', { force: true })
 }
 
+function cleanstyles() {
+	return del(baseDir + '/css/main.min.css', { force: true })
+}
+
 function startwatch() {
 	watch(baseDir  + '/**/scss/**/*', styles);
 	watch(baseDir  + '/**/*.{' + imageswatch + '}', images);
@@ -110,7 +114,7 @@ function build() {
 
 exports.browsersync = browsersync;
 exports.assets      = series(cleanimg, styles, scripts, images);
-exports.styles      = styles;
+exports.styles      = series(cleanstyles, styles)
 exports.scripts     = scripts;
 exports.images      = images;
 exports.cleanimg    = cleanimg;
