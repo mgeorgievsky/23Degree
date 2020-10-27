@@ -11,4 +11,41 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     })
 
+    let min = 100
+    let max = 500000
+    const $input = $("#area-input");
+
+    $(".js-range-slider").ionRangeSlider({
+        skin: "round",
+        min: min,
+        max: max,
+        from: 10000,
+        prettify_enabled: true,
+        prettify_separator: " ",
+        postfix: "м<sup>2</sup>",
+        onStart: function(data) {
+            $input.prop("value", data.from);
+        },
+        onChange: function(data) {
+            $input.prop("value", data.from);
+        }
+    });
+
+    const instance = $(".js-range-slider").data("ionRangeSlider");
+
+    $input.on("input", function() {
+        var val = $(this).prop("value");
+    
+        // validate
+        if (val < min) {
+            val = min;
+        } else if (val > max) {
+            val = max;
+        }
+    
+        instance.update({
+            from: val
+        });
+    });
+
 });

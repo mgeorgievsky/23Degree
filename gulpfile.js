@@ -97,7 +97,7 @@ function cleanstyles() {
 }
 
 function startwatch() {
-	watch(baseDir  + '/**/scss/**/*', styles);
+	watch(baseDir  + '/**/scss/**/*', series(cleanstyles, styles));
 	watch(baseDir  + '/**/*.{' + imageswatch + '}', images);
 	watch(baseDir  + '/**/*.{' + fileswatch + '}').on('change', browserSync.reload);
 	watch([baseDir + '/**/*.js', '!' + paths.scripts.dest + '/*.min.js'], scripts);
@@ -118,5 +118,5 @@ exports.styles      = series(cleanstyles, styles)
 exports.scripts     = scripts;
 exports.images      = images;
 exports.cleanimg    = cleanimg;
-exports.default     = parallel(images, styles, scripts, browsersync, startwatch);
+exports.default     = series(cleanstyles, parallel(images, styles, scripts, browsersync, startwatch));
 exports.build 		= series(cleanimg, scripts, styles, images, build);

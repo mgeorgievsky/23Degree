@@ -113,13 +113,7 @@
 					<div class="calculator__controls">
 						<div class="calculator__controls-area">
 							<div class="calculator__controls-area-title">Площадь помещения:</div>
-							<div class="calculator__controls-area-slider-labels">
-								<div class="calculator__controls-area-slider-label">100м<sup>2</sup></div>
-								<div class="calculator__controls-area-slider-label">10 000м<sup>2</sup></div>
-								<div class="calculator__controls-area-slider-label">250 000м<sup>2</sup></div>
-								<div class="calculator__controls-area-slider-label">500 000м<sup>2</sup></div>
-							</div>
-							<input type="range" min="100" max="500000" value="10000" class="calculator__controls-area-slider" id="calculator-area-range">
+							<input type="text" class="js-range-slider calculator__controls-area-slider" name="area-range" value="" />
 						</div>
 						<div class="calculator__controls-package">
 							<div class="calculator__controls-package-title">Выберите пакет:</div>
@@ -132,11 +126,11 @@
 					</div>
 					<div class="calculator__result">
 						<label for="area-input" class="calculator__result-area-label">Площадь помещения:</label>
-						<input type="text" name="area-input" id="area-input" class="calculator__result-area-input">
+						<div class="calculator__result-area-wrapper"><input type="text" name="area-input" id="area-input" class="calculator__result-area-input"><span>м<sup>2</sup></span></div>
 						<div class="calculator__result-meterprice-label">Средняя стоимость м2:</div>
 						<div class="calculator__result-meterprice">4 850 тг.</div>
 						<div class="calculator__result-totalprice-label">Средняя стоимость объекта:</div>
-						<div class="calculator__result-meterprice">4 850 тг.</div>
+						<div class="calculator__result-totalprice">4 850 тг.</div>
 						<input type="submit" value="Получить консультацию специалиста" class="button calculator__result-button">
 						<div class="calculator__result-phone">или позвоните нам по телефону: <span>+ 7 727 388 71 77</span></div>
 					</div>
@@ -146,7 +140,7 @@
 		</div>
 	</section>
 
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="js/main.min.js"></script>
 </body>
 
