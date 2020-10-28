@@ -398,6 +398,7 @@
         justify-content: space-between;
     }
     &__controls-package-button {
+        position: relative;
         display: block;
         max-width: 190px;
         width: 100%;
@@ -409,15 +410,52 @@
         line-height: 16px;
         padding: 15px;
         cursor: pointer;
+        &-description {
+            position: absolute;
+            background-color: $white;
+            color: $color-text1;
+            width: 443px;
+            height: 110px;
+            padding: 25px 30px 20px 30px;
+            bottom: -125px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+            border-radius: 4px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: -48px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 49px;
+                height: 24px;
+                border: 24px solid transparent;
+                border-bottom: 24px solid $white;
+            }
+        }
         &:hover {
             background-color: transparent;
             color: $color-accent;
             border-color: $color-accent;
         }
+        &--active, &--active:hover {
+            background-color: $color-accent;
+            border-color: $color-accent;
+            color: $white;
+        }
+        &--active &-description {
+            display: block;
+        }
     }
+    
 
     &__result {
         text-align: center;
+        &-wrapper {
+            max-width: 460px;
+            width: 100%;
+        }
     }
     &__result-area-label, &__result-meterprice-label, &__result-totalprice-label {
         font-size: 16px;
@@ -429,13 +467,20 @@
         align-items: center;
     }
     &__result-area-input {
-        min-width: 75px;
-        width: 0%;
+        width: 20px;
+        min-width: 20px;
         display: inline;
         background: none;
         border: none;
         color: $white;
         text-align: center;
+    }
+    &__result-area-input-buffer{
+        position: absolute;
+        top: -1000px;
+        left: -1000px;
+        visibility: hidden;
+        white-space: nowrap;
     }
     &__result-meterprice, &__result-totalprice, &__result-area-wrapper {
         font-size: 32px;

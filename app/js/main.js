@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let min = 100
     let max = 500000
     const $input = $("#area-input");
+    const $buffer = $('#area-input-buffer');
 
     $(".js-range-slider").ionRangeSlider({
         skin: "round",
@@ -28,6 +29,9 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         onChange: function(data) {
             $input.prop("value", data.from);
+
+            $buffer.text($input.val());
+            $input.width($buffer.width());
         }
     });
 
@@ -46,6 +50,14 @@ document.addEventListener("DOMContentLoaded", function() {
         instance.update({
             from: val
         });
+    });
+
+    $buffer.text($input.val());
+    $input.width($buffer.width());
+
+    $input.on('input', function() {
+        $buffer.text($input.val());
+        $input.width($buffer.width());
     });
 
 });

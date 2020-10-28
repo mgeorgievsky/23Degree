@@ -118,21 +118,36 @@
 						<div class="calculator__controls-package">
 							<div class="calculator__controls-package-title">Выберите пакет:</div>
 							<div class="calculator__controls-package-buttons">
-								<div class="button calculator__controls-package-button">Light</div>
-								<div class="button calculator__controls-package-button">Medium</div>
-								<div class="button calculator__controls-package-button">Full</div>
+								<div class="button calculator__controls-package-button button calculator__controls-package-button--active">
+									Light
+									<div class="calculator__controls-package-button-description">План расстановки мебели 3D визуализация. Все рабочие чертежи (план полов, план потолка, развертки по стенам, план электросетей)</div>
+								</div>
+								<div class="button calculator__controls-package-button">
+									Medium
+									<div class="calculator__controls-package-button-description">План расстановки мебели 3D визуализация. Все рабочие чертежи (план полов, план потолка, развертки по стенам, план электросетей)</div>
+								</div>
+								<div class="button calculator__controls-package-button">
+									Full
+									<div class="calculator__controls-package-button-description">План расстановки мебели 3D визуализация. Все рабочие чертежи (план полов, план потолка, развертки по стенам, план электросетей)</div>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="calculator__result">
-						<label for="area-input" class="calculator__result-area-label">Площадь помещения:</label>
-						<div class="calculator__result-area-wrapper"><input type="text" name="area-input" id="area-input" class="calculator__result-area-input"><span>м<sup>2</sup></span></div>
-						<div class="calculator__result-meterprice-label">Средняя стоимость м2:</div>
-						<div class="calculator__result-meterprice">4 850 тг.</div>
-						<div class="calculator__result-totalprice-label">Средняя стоимость объекта:</div>
-						<div class="calculator__result-totalprice">4 850 тг.</div>
-						<input type="submit" value="Получить консультацию специалиста" class="button calculator__result-button">
-						<div class="calculator__result-phone">или позвоните нам по телефону: <span>+ 7 727 388 71 77</span></div>
+					
+					<div class="calculator__result-wrapper">
+						<div class="calculator__result">
+							<label for="area-input" class="calculator__result-area-label">Площадь помещения:</label>
+							<div class="calculator__result-area-wrapper">
+								<input type="text" name="area-input" id="area-input" class="calculator__result-area-input"><span> м<sup>2</sup></span>
+								<div class="calculator__result-area-input-buffer" id="area-input-buffer"></div>
+							</div>
+							<div class="calculator__result-meterprice-label">Средняя стоимость м2:</div>
+							<div class="calculator__result-meterprice">4 850 тг.</div>
+							<div class="calculator__result-totalprice-label">Средняя стоимость объекта:</div>
+							<div class="calculator__result-totalprice">4 850 тг.</div>
+							<input type="submit" value="Получить консультацию специалиста" class="button calculator__result-button">
+							<div class="calculator__result-phone">или позвоните нам по телефону: <span>+ 7 727 388 71 77</span></div>
+						</div>
 					</div>
 				</form>
 			</div>
