@@ -11,6 +11,17 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     })
 
+    const packageButtons = document.getElementsByClassName("calculator__controls-package-button");
+
+    for (let button of packageButtons) {
+        button.addEventListener('click', function() { 
+            if (!this.classList.contains("calculator__controls-package-button--active")) {
+                document.getElementsByClassName("calculator__controls-package-button--active")[0].classList.remove("calculator__controls-package-button--active")
+                this.classList.add("calculator__controls-package-button--active")
+            }
+        })
+    }
+
     let min = 100
     let max = 500000
     const $input = $("#area-input");
@@ -59,5 +70,21 @@ document.addEventListener("DOMContentLoaded", function() {
         $buffer.text($input.val());
         $input.width($buffer.width());
     });
+
+    $(".tabs-stage .tab").hide();
+    $(".tabs-stage .tab:first-child").show();
+    $(".tabs-nav li:first").addClass("tab-active");
+
+    // Change tab class and display content
+    $(".tabs-nav a").on("click", function (event) {
+    event.preventDefault();
+    let parent = $(this).parents(".tabs-container");
+    $(".tabs-nav li" , parent).removeClass("tab-active");
+    $(this)
+        .parent()
+        .addClass("tab-active");
+    $(".tabs-stage .tab", parent).hide();
+    $($(this).attr("href")).show();
+});
 
 });

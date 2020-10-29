@@ -502,3 +502,137 @@
         }
     }
 }
+
+.portfolio {
+    &__title {
+    }
+    &__tabs-container {
+    }
+    &__tabs-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 25px;
+        height: 51px;
+    }
+    &__tab-title {
+        .button {
+            display: inline-block;
+            color: $color-accent;
+            background-color: transparent;
+            border-radius: 0px;
+            border-top: 1px solid $color-accent;
+            border-bottom: 1px solid $color-accent;
+            font-size: 14px;
+            line-height: 14px;
+            font-weight: 300;
+            text-transform: uppercase;
+            padding: 17px 35px 16px 35px;
+            &:hover {
+                color: $color-accent-hover;
+            } 
+        }
+        & + & {
+            .button {
+                position: relative;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 1px;
+                    left: 0;
+                    bottom: 3px;
+                    top: 3px;
+                    background-color: $color-accent;
+                }
+            }
+        }
+        &:first-child {
+            .button {
+                border-radius: 25px 0 0 25px;
+                border-left: 1px solid $color-accent;
+            }
+        }
+        &:last-child {
+            .button {
+                border-radius: 0 25px 25px 0;
+                border-right: 1px solid $color-accent;
+            }
+        }
+        &.tab-active {
+            .button {
+                color: $white;
+                padding-top: 19px;
+                padding-bottom: 18px;
+                border-radius: 5px;
+                background-color: $color-accent;
+                &:hover {
+                    color: $white;
+                }
+            }
+            &:first-child {
+                .button {
+                    border-radius: 25px 5px 5px 25px;
+                }
+            }
+            &:last-child {
+                .button {
+                    border-radius: 5px 25px 25px 5px;
+                }
+            }
+        }
+        &.tab-active + & {
+            .button {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+    &__tabs-stage {
+    }
+    &__tabs-tab {
+    }
+    &__tab-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__item {
+        max-width: 362px;
+        margin-bottom: 30px;
+        img {
+            display: block;
+        }
+    }
+}
+
+.advantages {
+    background-color: $grey5;
+    &__title {
+    }
+    &__items {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    &__item {
+        width: 285px;
+        margin-bottom: 35px;
+    }
+    &__item-image {
+        width: 125px;
+        height: 75px;
+        margin: 0 auto;
+        border-bottom: 1px solid $color-accent;
+        margin-bottom: 22px;
+    }
+    &__item-text {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        color: $grey3;
+        padding: 0 5px;
+    }
+}
+
