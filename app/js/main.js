@@ -87,4 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
     $($(this).attr("href")).show();
 });
 
+const scrollbar = windows.Scrollbar
+Scrollbar.init(document.querySelector('#companies-scroll'))
+
 });
