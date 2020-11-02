@@ -710,14 +710,18 @@
             height: 11px;
             border-radius: 6px;
             top: -3px;
+            cursor: pointer;
+            &:hover {
+                background: $color-accent-hover;
+            }
             &::before {
                 content: "";
                 position: absolute;
-                background-image: url(../img/scrollbar-dots.png);
+                background-image: url(../img/scrollbar-dots.svg);
                 background-repeat: no-repeat;
                 background-position: center center;
-                width: 7px;
-                height: 5px;
+                width: 8px;
+                height: 6px;
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
@@ -731,5 +735,165 @@
         & + & {
             margin-left: 50px;
         }
+    }
+}
+
+
+.team {
+
+    // .team__title
+
+    &__title {
+    }
+
+    // .team__items
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    // .team__item
+
+    &__item {
+        max-width: 360px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    // .team__item-image
+
+    &__item-image {
+        height: 225px;
+        width: 225px;
+        border-radius: 50%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        img {
+            display: block;
+            margin-right: 0;
+        }
+    }
+
+    // .team__item-name
+
+    &__item-name {
+        color: $color-accent;
+        font-size: 24px;
+        font-weight: 300;
+        margin-bottom: 8px;
+    }
+
+    // .team__item-position
+
+    &__item-position {
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    // .team__quote
+
+    &__quote {
+        position: relative;
+        padding: 18px 95px 5px 95px;
+        margin-top: 25px;
+        text-align: center;
+        &::before, &::after {
+            position: absolute;
+            content: "";
+            width: 47px;
+            height: 37px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        &::before {
+            background-image: url(../img/quote-left.png);
+            top: 0;
+            left: 0;
+        }
+        &::after {
+            background-image: url(../img/quote-right.png);
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    // .team__quote-title
+
+    &__quote-title {
+        font-size: 30px;
+        font-weight: 300;
+        margin-bottom: 16px;
+    }
+
+    // .team__quote-main
+
+    &__quote-main {
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 12px;
+    }
+
+    // .team__quote-author
+
+    &__quote-author {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 2px;
+    }
+
+    // .team__quote-author-position
+
+    &__quote-author-position {
+        font-size: 16px;
+        font-weight: 300;
+    }
+}
+
+
+.blog {
+
+    background-color: $grey5;
+
+    // .blog__title
+
+    &__title {
+    }
+
+    // .blog__items
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // .blog__link
+
+    &__link {
+        width: 555px;
+        text-align: center;
+        &:hover &-text {
+            border-bottom: 1px solid $color-accent;
+        }
+    }
+
+    // .blog__link-image
+
+    &__link-image {
+        width: 100%;
+        margin-bottom: 32px;
+        img {
+            display: block;
+        }
+    }
+
+    // .blog__link-text
+
+    &__link-text {
+        display: inline;
+        line-height: 20px;
     }
 }
