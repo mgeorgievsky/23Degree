@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+    
+
 	document.getElementById("button-menu").addEventListener('click', function() { 
         if (this.classList.contains("first-screen__menu-icon--opened")) {
             this.classList.remove("first-screen__menu-icon--opened")
@@ -87,7 +89,6 @@ document.addEventListener("DOMContentLoaded", function() {
     $($(this).attr("href")).show();
 });
 
-const scrollbar = windows.Scrollbar
-Scrollbar.init(document.querySelector('#companies-scroll'))
+Scrollbar.initAll();
 
 });

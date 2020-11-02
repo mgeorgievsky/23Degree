@@ -96,11 +96,15 @@ function cleanstyles() {
 	return del(baseDir + '/css/main.min.css', { force: true })
 }
 
+function cleanscripts() {
+	return del(baseDir + '/js/main.min.js', { force: true })
+}
+
 function startwatch() {
 	watch(baseDir  + '/**/scss/**/*', series(cleanstyles, styles));
 	watch(baseDir  + '/**/*.{' + imageswatch + '}', images);
 	watch(baseDir  + '/**/*.{' + fileswatch + '}').on('change', browserSync.reload);
-	watch([baseDir + '/**/*.js', '!' + paths.scripts.dest + '/*.min.js'], scripts);
+	watch([baseDir + '/**/*.js', '!' + paths.scripts.dest + '/*.min.js'], series(cleanscripts, scripts));
 }
 
 function build() {

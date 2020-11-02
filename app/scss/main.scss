@@ -682,6 +682,8 @@
 
 .companies {
 
+    background-color: $grey5;
+
     // .companies__title
 
     &__title {
@@ -689,10 +691,37 @@
 
     // .companies__items
 
+
     &__items {
+        position: relative;
+        height: 125px;
         ul {
             display: flex;
-            overflow: auto;
+        }
+        .scrollbar-track {
+            opacity: 1;
+            height: 5px;
+            background: rgba($grey2, .1);
+            border-radius: 3px;
+            bottom: 3px;
+        }
+        .scrollbar-thumb {
+            background: $color-accent;
+            height: 11px;
+            border-radius: 6px;
+            top: -3px;
+            &::before {
+                content: "";
+                position: absolute;
+                background-image: url(../img/scrollbar-dots.png);
+                background-repeat: no-repeat;
+                background-position: center center;
+                width: 7px;
+                height: 5px;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
     }
 
