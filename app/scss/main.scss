@@ -897,3 +897,134 @@
         line-height: 20px;
     }
 }
+
+
+.feedback {
+
+    background-image: url(../img/form-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: $white;
+
+    // .feedback__title
+
+    &__title {
+        color: $white;
+        &::after {
+            background-color: $white;
+        }
+    }
+
+    // .feedback__text
+
+    &__text {
+        font-size: 26px;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    // .feedback__inner
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // .feedback__form
+
+    &__form {
+        max-width: 750px;
+        width: 100%;
+        form {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__form-name, &__form-email, &__form-phone, &__form-message {
+        border-radius: 10px;
+    }
+
+    &__form-name, &__form-email, &__form-phone {
+        max-width: 240px;
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    // .feedback__form-message
+
+    &__form-message {
+        width: 100%;
+        height: 120px;
+        margin-bottom: 20px;
+        resize: none;
+    }
+
+    // .feedback__form-button
+
+    &__form-button {
+        border: none;
+        margin: 0 auto;
+        padding-left: 45px;
+        padding-right: 45px;
+        cursor: pointer;
+    }
+
+    // .feedback__contacts
+
+    &__contacts {
+    }
+
+    // .feedback__contacts-link
+
+    &__contacts-link {
+        position: relative;
+        display: block;
+        color: $white;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 27px;
+        margin-bottom: 15px;
+        padding-left: 45px;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 28px;
+            height: 28px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: auto auto;
+            border: 1px solid $white;
+            border-radius: 2px;
+        }
+        &--phone::before {
+            background-image: url(../img/contacts-icon-phone.png);
+        }
+        &--whatsapp::before {
+            background-image: url(../img/contacts-icon-whatsapp.png);
+        }
+        &--email::before {
+            background-image: url(../img/contacts-icon-email.png);
+        }
+        &--skype::before {
+            background-image: url(../img/contacts-icon-skype.png);
+        }
+        &--telegram::before {
+            background-image: url(../img/contacts-icon-telegram.png);
+        }
+    }
+    
+    &__schedule {
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: 300;
+
+    }
+}
+
