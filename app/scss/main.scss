@@ -1028,3 +1028,86 @@
     }
 }
 
+.map {
+    padding: 0;
+    margin: 0;
+}
+
+
+.footer {
+    background-color: $grey6;
+    color: $white;
+
+    // .footer__top
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // .footer__nav
+
+    &__nav {
+        max-width: 510px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    // .footer__nav-link
+
+    &__nav-link {
+        display: block;
+        width: 200px;
+        color: $white;
+    }
+
+    // .footer__socials
+
+    &__socials {
+    }
+
+    // .footer__socials-text
+
+    &__socials-text {
+    }
+
+    // .footer__socials-list
+
+    &__socials-list {
+    }
+
+    // .footer__socials-link
+
+    &__socials-link {
+    }
+
+    // .footer__bottom
+
+    &__bottom {
+    }
+
+    // .footer__copyright
+
+    &__copyright {
+    }
+
+    // .footer__creator
+
+    &__creator {
+    }
+
+    // .footer__creator-text
+
+    &__creator-text {
+    }
+
+    // .footer__creator-logo
+
+    &__creator-logo {
+    }
+}
+.container {
+}
+
