@@ -80,16 +80,26 @@
         position: relative;
         &__menu {
             z-index: 5;
+            width: auto;
+            margin-left: 25px;
+            margin-top: 0;
+        }
+        &__phone {
+            padding-right: 0;
+            &::before {
+                display: none;
+            }
         }
         &__menu-list {
             background-color: $grey6;
             position: absolute;
-            top: 110px;
+            top: 0;
             left: 0;
             right: 0;
             width: 100%;
             height: 0;
             &--opened {
+                padding-top: 25px;
                 padding-left: 30px;
                 height: 500px;
             }
@@ -117,39 +127,33 @@
     .first-screen {
         position: relative;
         &__header {
-            flex-direction: column;
+            
         }
         &__menu {
+            width: auto;
+            order: 2;
             z-index: 5;
+            margin-top: 0;
         }
-        &__menu-list {
-            background-color: $grey6;
-            position: absolute;
-            top: 110px;
-            left: 0;
-            right: 0;
+        &__phone {
+            order: 3;
             width: 100%;
-            height: 0;
-            &--opened {
-                padding-left: 30px;
-                height: 500px;
-            }
-            li {
-
-            }
-            li, a {
-                display: block;
+            margin-top: 30px;
+            text-align: center;
+            padding: 0;
+            font-size: 16px;
+            a {
                 font-size: 26px;
-                margin-top: 30px;
-            }
-        }
-        &__menu-link {
-            & + & {
-                margin-top: 15px;
+                margin-top: 8px;
             }
         }
         &__input {
             width: 95%;
+        }
+        &__title {
+            font-size: 36px;
+        }
+        &__subtitle {
         }
     }
 }
