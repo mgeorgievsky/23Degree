@@ -17,8 +17,6 @@
         justify-content: space-between;
         align-items: center;
     }
-    &__logo {
-    }
     &__phone {
         position: relative;
         margin-left: auto;
@@ -125,8 +123,6 @@
         &--opened {
             width: 370px;
         }
-    }
-    &__menu-link {
     }
 
     &__title {
@@ -260,10 +256,6 @@
 
 
 .services {
-    &__title {
-    }
-    &__inner {
-    }
     &__item {
         display: flex;
         justify-content: space-between;
@@ -505,10 +497,6 @@
 }
 
 .portfolio {
-    &__title {
-    }
-    &__tabs-container {
-    }
     &__tabs-nav {
         display: flex;
         justify-content: center;
@@ -589,10 +577,6 @@
             }
         }
     }
-    &__tabs-stage {
-    }
-    &__tabs-tab {
-    }
     &__tab-content {
         display: flex;
         justify-content: space-between;
@@ -609,8 +593,6 @@
 
 .advantages {
     background-color: $grey5;
-    &__title {
-    }
     &__items {
         display: flex;
         justify-content: center;
@@ -638,17 +620,6 @@
 }
 
 .process {
-
-    // .process__title
-
-    &__title {
-    }
-
-    // .process__items
-
-    &__items {
-    }
-
     // .process__item
 
     &__item {
@@ -684,11 +655,6 @@
 .companies {
 
     background-color: $grey5;
-
-    // .companies__title
-
-    &__title {
-    }
 
     // .companies__items
 
@@ -743,9 +709,6 @@
 .team {
 
     // .team__title
-
-    &__title {
-    }
 
     // .team__items
 
@@ -859,11 +822,6 @@
 
     background-color: $grey5;
 
-    // .blog__title
-
-    &__title {
-    }
-
     // .blog__items
 
     &__items {
@@ -972,11 +930,6 @@
         padding-left: 45px;
         padding-right: 45px;
         cursor: pointer;
-    }
-
-    // .feedback__contacts
-
-    &__contacts {
     }
 
     // .feedback__contacts-link
@@ -1113,11 +1066,6 @@
         padding: 0 15px 0 15px;
     }
 
-    // .footer__copyright
-
-    &__copyright {
-    }
-
     // .footer__creator
 
     &__creator {
@@ -1131,11 +1079,5 @@
         margin-right: 10px;
     }
 
-    // .footer__creator-logo
 
-    &__creator-logo {
-    }
 }
-.container {
-}
-
