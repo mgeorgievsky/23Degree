@@ -13,6 +13,15 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     })
 
+    $(document).ready(function(){
+        // плавное перемещение страницы к нужному блоку
+        $("#first-screen-scroll-button").click(function () {
+            elementClick = $(this).attr("href");
+            destination = $(elementClick).offset().top;
+            $("body,html").animate({scrollTop: destination }, 800);
+        });
+    });
+
     const packageButtons = document.getElementsByClassName("calculator__controls-package-button");
 
     for (let button of packageButtons) {

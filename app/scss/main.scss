@@ -213,6 +213,7 @@
     }
 
     &__scroll {
+        display: block;
         position: relative;
         width: 17px;
         height: 50px;
@@ -1037,55 +1038,79 @@
 .footer {
     background-color: $grey6;
     color: $white;
+    padding: 40px 0 40px 0;
+    font-size: 14px;
+    font-weight: 300;
 
     // .footer__top
 
     &__top {
         display: flex;
-        justify-content: space-between;
+        padding: 0 15px 55px 15px;
+        border-bottom: 1px solid rgba($white, .2);
     }
 
     // .footer__nav
 
     &__nav {
-        max-width: 510px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        margin-right: 80px;
     }
 
     // .footer__nav-link
 
     &__nav-link {
         display: block;
-        width: 200px;
+        min-width: 60px;
         color: $white;
+        font-size: 14px;
+        font-weight: 300;
     }
 
     // .footer__socials
 
     &__socials {
+        margin-left: auto;
     }
 
     // .footer__socials-text
 
     &__socials-text {
+        margin-bottom: 2px;
     }
 
     // .footer__socials-list
 
     &__socials-list {
+        li {
+            display: inline-block;
+        }
     }
 
     // .footer__socials-link
 
     &__socials-link {
+        display: inline-block;
+        border: 1px solid $white;
+        border-radius: 4px;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 
     // .footer__bottom
 
     &__bottom {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px 0 15px;
     }
 
     // .footer__copyright
@@ -1096,11 +1121,14 @@
     // .footer__creator
 
     &__creator {
+        display: flex;
+        align-items: center;
     }
 
     // .footer__creator-text
 
     &__creator-text {
+        margin-right: 10px;
     }
 
     // .footer__creator-logo

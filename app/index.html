@@ -65,13 +65,13 @@
 				</div>
 			</div>
 
-			<button class="first-screen__scroll">
-			</button>
+			<a class="first-screen__scroll" href="#section-services" id="first-screen-scroll-button">
+			</a>
 
 		</div>
 	</main>
 
-	<section class="services">
+	<section class="services" id="section-services">
 		<div class="container">
 			<h2 class="section-title services__title">Наши услуги</h2>
 			<div class="services__inner">
@@ -138,7 +138,7 @@
 						<div class="calculator__result">
 							<label for="area-input" class="calculator__result-area-label">Площадь помещения:</label>
 							<div class="calculator__result-area-wrapper">
-								<input type="text" name="area-input" id="area-input" class="calculator__result-area-input"><span> м<sup>2</sup></span>
+								<input type="number" min="100" max="500000" name="area-input" id="area-input" class="calculator__result-area-input"><span> м<sup>2</sup></span>
 								<div class="calculator__result-area-input-buffer" id="area-input-buffer"></div>
 							</div>
 							<div class="calculator__result-meterprice-label">Средняя стоимость м2:</div>
@@ -440,10 +440,15 @@
 			<div class="footer__top">
 				<ul class="footer__nav">
 					<li><a href="#" class="footer__nav-link">Главная</a></li>
-					<li><a href="#" class="footer__nav-link">Вопросы-ответы</a></li>
-					<li><a href="#" class="footer__nav-link">Новости</a></li>
 					<li><a href="#" class="footer__nav-link">Тарифы</a></li>
+					
+				</ul>
+				<ul class="footer__nav">
+					<li><a href="#" class="footer__nav-link">Вопросы-ответы</a></li>
 					<li><a href="#" class="footer__nav-link">Личный кабинет</a></li>
+				</ul>
+				<ul class="footer__nav">
+					<li><a href="#" class="footer__nav-link">Новости</a></li>
 					<li><a href="#" class="footer__nav-link">Договор публичной оферты</a></li>
 				</ul>
 				<div class="footer__socials">
