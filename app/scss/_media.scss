@@ -3,6 +3,62 @@
         padding-left: 15px;
         padding-right: 15px;
     }
+
+    .services {
+        &__item {
+            justify-content: space-around;
+            &:nth-child(even) &-content {
+                padding-left: 30px;
+            }
+        }
+        &__item-content, &__item-image {
+            max-width: 50%;
+        }
+        &__item-image {
+            img {
+                width: 100%;
+            };
+        }
+    }
+
+    .calculator {
+        &__form {
+            form {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    
+        &__controls {
+            margin-bottom: 100px;
+        }
+        &__controls-package-button {
+            
+            &:first-child &-description {
+                left: 0;
+                transform: none;
+                &::before {
+                    left: 70px;
+                    transform: none;
+                }
+            }
+
+            &:last-child &-description {
+                left: auto;
+                right: 0;
+                transform: none;
+                &::before {
+                    left: auto;
+                    right: 68px;
+                    transform: none;
+                }
+            }
+        }
+        
+        &__result-area-input {
+            width: 20px;
+        }
+    }
 }
 
 @media (max-width: 980px) {
@@ -26,6 +82,29 @@
             }
         }
     }
+
+    
+.services {
+    &__item {
+        flex-direction: column-reverse;
+        width: 80%;
+        margin: 0 auto;
+        &:nth-child(even) {
+            flex-direction: column-reverse;
+        }
+        &:nth-child(even) &-content {
+            padding-left: 0;
+        }
+    }
+    &__item-content, &__item-image {
+        width: 100%;
+        max-width: 100%;
+    }
+    &__item-content {
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+}
 }
 
 @media (max-width: 890px) {
@@ -121,9 +200,143 @@
             width: 90%;
         }
     }
+
+    .calculator {
+        &__title {
+            &::after {
+
+            }
+        }
+        &__subtitle {
+
+        }
+        &__form {
+            form {
+
+            }
+        }
+    
+        &__controls {
+
+        }
+        &__controls-area, &__controls-package {
+
+        }
+        &__controls-area-title, &__controls-package-title {
+
+        }
+        &__controls-area-slider-labels {
+
+        }
+        
+        .irs-min, .irs-single, .irs-max {
+
+            &::before {
+
+            }
+        }
+        .irs-bar {
+
+        }
+        .irs {
+            &::after, &::before {
+
+            }
+            &::after {
+
+            }
+            &::before {
+
+            }
+        }
+        .irs-line {
+
+            
+            
+        }
+        .irs-handle {
+
+            
+        }
+    
+        &__controls-package-buttons {
+
+        }
+        &__controls-package-button {
+
+            &:first-child &-description {
+    
+                &::before {
+                    left: 50px;
+                }
+            }
+
+            &:last-child &-description {
+
+                &::before {
+                    right: 48px;
+                }
+            }
+            &-description {
+                width: 320%;
+                height: fit-content;
+                top: 60px;
+                &::before {
+                }
+            }
+            
+            &:hover {
+
+            }
+            &--active, &--active:hover {
+    
+            }
+            &--active &-description {
+
+            }
+        }
+        
+    
+        &__result {
+
+            &-wrapper {
+ 
+            }
+        }
+        &__result-area-label, &__result-meterprice-label, &__result-totalprice-label {
+ 
+        }
+        &__result-area-wrapper {
+
+        }
+        &__result-area-input {
+
+        }
+        &__result-area-input-buffer{
+
+        }
+        &__result-meterprice, &__result-totalprice, &__result-area-wrapper {
+ 
+        }
+        &__result-button {
+
+        }
+        &__result-phone {
+
+            span {
+
+            }
+        }
+    }
 }
 
 @media (max-width: 480px) {
+    .section-title {
+        font-size: 28px;
+        &::after {
+            width: 260px;
+        }
+    }
     .first-screen {
         position: relative;
         &__header {
@@ -154,6 +367,161 @@
             font-size: 36px;
         }
         &__subtitle {
+        }
+    }
+
+    .services {
+        .container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        &__item {
+            width: 100%;
+            &:nth-child(even) &-content {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        &__item-content {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    .calculator {
+        &__title {
+            &::after {
+
+            }
+        }
+        &__subtitle {
+
+        }
+        &__form {
+            form {
+
+            }
+        }
+    
+            &__controls {
+                margin-bottom: 130px;
+        }
+        &__controls-area, &__controls-package {
+            border: none;
+            border-radius: 0;
+            border-top: 1px solid $white;
+            text-align: center;
+        }
+        &__controls-package {
+            border-bottom: 1px solid $white;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        &__controls-area-title, &__controls-package-title {
+
+        }
+        &__controls-area-slider-labels {
+
+        }
+        
+        .irs-min, .irs-single, .irs-max {
+
+            &::before {
+
+            }
+        }
+        .irs-bar {
+
+        }
+        .irs {
+            &::after, &::before {
+
+            }
+            &::after {
+
+            }
+            &::before {
+
+            }
+        }
+        .irs-line {
+
+            
+            
+        }
+        .irs-handle {
+
+            
+        }
+    
+        &__controls-package-buttons {
+
+        }
+        &__controls-package-button {
+            font-size: 13px;
+
+            &:first-child &-description {
+    
+                &::before {
+                    left: 30px;
+                }
+            }
+
+            &:last-child &-description {
+
+                &::before {
+                    right: 28px;
+                }
+            }
+            &-description {
+                width: 320%;
+                height: fit-content;
+                top: 60px;
+                &::before {
+                }
+            }
+            
+            &:hover {
+
+            }
+            &--active, &--active:hover {
+    
+            }
+            &--active &-description {
+
+            }
+        }
+        
+    
+        &__result {
+
+            &-wrapper {
+ 
+            }
+        }
+        &__result-area-label, &__result-meterprice-label, &__result-totalprice-label {
+ 
+        }
+        &__result-area-wrapper {
+
+        }
+        &__result-area-input {
+
+        }
+        &__result-area-input-buffer{
+
+        }
+        &__result-meterprice, &__result-totalprice, &__result-area-wrapper {
+ 
+        }
+        &__result-button {
+            font-size: 12px;
+        }
+        &__result-phone {
+
+            span {
+
+            }
         }
     }
 }

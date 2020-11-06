@@ -264,6 +264,7 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 20px;
+        
         &:nth-child(even) {
             flex-direction: row-reverse;
         }
@@ -287,9 +288,13 @@
         padding-left: 37px;
         padding-right: 37px;
     }
+    &__item-content {
+        padding-right: 15px;
+    }
     &__item-image {
         img {
             display: block;
+            // width: 100%;
         }
     }
 }
@@ -405,6 +410,9 @@
         font-size: 16px;
         line-height: 16px;
         padding: 15px;
+        & + & {
+            margin-left: 14px;
+        }
         cursor: pointer;
         &-description {
             position: absolute;
