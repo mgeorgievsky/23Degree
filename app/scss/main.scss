@@ -517,6 +517,7 @@
     }
     &__tab-title {
         .button {
+            white-space: nowrap;
             display: inline-block;
             color: $color-accent;
             background-color: transparent;

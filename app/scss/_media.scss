@@ -59,6 +59,15 @@
             width: 20px;
         }
     }
+
+    .portfolio {
+        &__tab-content {
+            justify-content: center;//
+        }
+        &__item {
+            margin: 15px;//
+        }
+    }
 }
 
 @media (max-width: 980px) {
@@ -136,6 +145,74 @@
             }
         }
     }
+
+    .portfolio {
+        &__tabs-nav {
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 540px;
+            height: auto;
+            margin: 0 auto;
+        }
+        &__tab-title {
+            margin-bottom: 15px;
+            .button {
+                white-space: nowrap;
+                border-radius: 25px;
+                border: 1px solid $color-accent;
+                text-align: center;
+                width: 100%;
+            }
+            & + & {
+                margin-left: 15px;
+                .button {
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+            &:first-child {
+                .button {
+                    border-radius: 25px;
+                }
+            }
+            &:last-child {
+                .button {
+                    border-radius: 25px;
+                }
+            }
+            &.tab-active {
+                .button {
+                    padding-top: 17px;//
+                    padding-bottom: 16px;//
+                    border-radius: 25px;//
+                }
+                &:first-child {
+                    .button {
+                        border-radius: 25px;
+                    }
+                }
+                &:last-child {
+                    .button {
+                        border-radius: 25px;
+                    }
+                }
+            }
+            &.tab-active + & {
+                .button {
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &__item {
+            max-width: 45%;
+            img {
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media (max-width: 780px) {
@@ -149,6 +226,19 @@
             & + & {
                 margin-top: 20px;
                 margin-left: 0;
+            }
+        }
+    }
+
+    .portfolio {
+        .container {
+            padding: 0;
+        }
+        &__item {
+            margin: 5px;
+            max-width: 48%;
+            img {
+                width: 100%;
             }
         }
     }
@@ -182,9 +272,6 @@
                 padding-left: 30px;
                 height: 500px;
             }
-            li {
-
-            }
             li, a {
                 display: block;
                 font-size: 26px;
@@ -202,129 +289,36 @@
     }
 
     .calculator {
-        &__title {
-            &::after {
-
-            }
-        }
-        &__subtitle {
-
-        }
-        &__form {
-            form {
-
-            }
-        }
-    
-        &__controls {
-
-        }
-        &__controls-area, &__controls-package {
-
-        }
-        &__controls-area-title, &__controls-package-title {
-
-        }
-        &__controls-area-slider-labels {
-
-        }
-        
-        .irs-min, .irs-single, .irs-max {
-
-            &::before {
-
-            }
-        }
-        .irs-bar {
-
-        }
-        .irs {
-            &::after, &::before {
-
-            }
-            &::after {
-
-            }
-            &::before {
-
-            }
-        }
-        .irs-line {
-
-            
-            
-        }
-        .irs-handle {
-
-            
-        }
-    
-        &__controls-package-buttons {
-
-        }
         &__controls-package-button {
 
             &:first-child &-description {
-    
                 &::before {
                     left: 50px;
                 }
             }
 
             &:last-child &-description {
-
                 &::before {
                     right: 48px;
                 }
             }
+
             &-description {
                 width: 320%;
                 height: fit-content;
                 top: 60px;
-                &::before {
-                }
-            }
-            
-            &:hover {
-
-            }
-            &--active, &--active:hover {
-    
-            }
-            &--active &-description {
-
             }
         }
-        
-    
-        &__result {
+    }
 
-            &-wrapper {
- 
-            }
+    .portfolio {
+        .container {
+            padding: 0;
         }
-        &__result-area-label, &__result-meterprice-label, &__result-totalprice-label {
- 
-        }
-        &__result-area-wrapper {
-
-        }
-        &__result-area-input {
-
-        }
-        &__result-area-input-buffer{
-
-        }
-        &__result-meterprice, &__result-totalprice, &__result-area-wrapper {
- 
-        }
-        &__result-button {
-
-        }
-        &__result-phone {
-
-            span {
-
+        &__item {
+            max-width: 90%;
+            img {
+                width: 100%;
             }
         }
     }
@@ -339,9 +333,6 @@
     }
     .first-screen {
         position: relative;
-        &__header {
-            
-        }
         &__menu {
             width: auto;
             order: 2;
@@ -366,8 +357,6 @@
         &__title {
             font-size: 36px;
         }
-        &__subtitle {
-        }
     }
 
     .services {
@@ -389,22 +378,11 @@
     }
 
     .calculator {
-        &__title {
-            &::after {
-
-            }
-        }
         &__subtitle {
-
+            font-size: 20px;
         }
-        &__form {
-            form {
-
-            }
-        }
-    
-            &__controls {
-                margin-bottom: 130px;
+        &__controls {
+            margin-bottom: 130px;
         }
         &__controls-area, &__controls-package {
             border: none;
@@ -417,58 +395,14 @@
             padding-left: 0;
             padding-right: 0;
         }
-        &__controls-area-title, &__controls-package-title {
-
-        }
-        &__controls-area-slider-labels {
-
-        }
-        
-        .irs-min, .irs-single, .irs-max {
-
-            &::before {
-
-            }
-        }
-        .irs-bar {
-
-        }
-        .irs {
-            &::after, &::before {
-
-            }
-            &::after {
-
-            }
-            &::before {
-
-            }
-        }
-        .irs-line {
-
-            
-            
-        }
-        .irs-handle {
-
-            
-        }
-    
-        &__controls-package-buttons {
-
-        }
         &__controls-package-button {
             font-size: 13px;
-
             &:first-child &-description {
-    
                 &::before {
                     left: 30px;
                 }
             }
-
             &:last-child &-description {
-
                 &::before {
                     right: 28px;
                 }
@@ -477,50 +411,29 @@
                 width: 320%;
                 height: fit-content;
                 top: 60px;
-                &::before {
-                }
             }
-            
-            &:hover {
-
-            }
-            &--active, &--active:hover {
-    
-            }
-            &--active &-description {
-
-            }
-        }
-        
-    
-        &__result {
-
-            &-wrapper {
- 
-            }
-        }
-        &__result-area-label, &__result-meterprice-label, &__result-totalprice-label {
- 
-        }
-        &__result-area-wrapper {
-
-        }
-        &__result-area-input {
-
-        }
-        &__result-area-input-buffer{
-
-        }
-        &__result-meterprice, &__result-totalprice, &__result-area-wrapper {
- 
         }
         &__result-button {
             font-size: 12px;
         }
-        &__result-phone {
+    }
+}
 
-            span {
+@media (max-width: 400px) {
+        .portfolio {
+        &__tab-title {
+            margin: 0 15px;
+            width: 100%;
+            margin-bottom: 15px;
+            & + & {
+                margin-left: 15px;
+            }
+        }
 
+        &__item {
+            max-width: 100%;
+            img {
+                width: 100%;
             }
         }
     }
