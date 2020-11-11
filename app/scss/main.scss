@@ -1024,6 +1024,7 @@
     // .footer__nav-link
 
     &__nav-link {
+        white-space: nowrap;
         display: block;
         min-width: 60px;
         color: $white;
