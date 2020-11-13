@@ -1,6 +1,6 @@
 // VARIABLES & PATHS
 
-let fileswatch   = 'html,htm,css,scss,js,txt,json,md,woff2', // List of files extensions for watching & hard reload (comma separated)
+let fileswatch   = 'html,htm,css,js,txt,json,md,woff2', // List of files extensions for watching & hard reload (comma separated)
 	imageswatch  = 'jpg,jpeg,png,webp,svg', // List of images extensions for watching & compression (comma separated)
 	fonttypes	 = 'woff,woff2,ttf,eot'		
 	baseDir      = 'app', // Base directory path without «/» at the end
@@ -122,5 +122,5 @@ exports.styles      = series(cleanstyles, styles)
 exports.scripts     = scripts;
 exports.images      = images;
 exports.cleanimg    = cleanimg;
-exports.default     = series(cleanstyles, parallel(images, styles, scripts, browsersync, startwatch));
+exports.default     = parallel(series(cleanstyles, styles), series(cleanscripts, scripts), images, browsersync, startwatch);
 exports.build 		= series(cleanimg, scripts, styles, images, build);
